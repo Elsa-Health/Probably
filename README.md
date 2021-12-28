@@ -24,6 +24,9 @@ The library is written in F# and compiles with fable to Javascript for use in JS
 // TODO
 ## License
 
+## TODO
+- [ ] Publish package as a nuget package
+
 [Apache 2.0](https://choosealicense.com/licenses/apache-2.0/)
 
   
