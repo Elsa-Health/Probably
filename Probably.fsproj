@@ -5,6 +5,14 @@
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <!--  Generate package everytime we run dotnet build  -->
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        
+        <PackageId>ElsaHealth.Probably</PackageId>
+        <Version>0.0.1</Version>
+        <Authors>Elsa Health</Authors>
+        <Company>Elsa Health Inc.</Company>
+        <PackageLicenseUrl>Apache-2.0</PackageLicenseUrl>
+        <PackageTags>Probability;Stochastic;Distributions;Random Variables;JavaScript;Fable</PackageTags>
+        <RepositoryUrl>https://github.com/Elsa-Health/Probably</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
@@ -14,8 +22,13 @@
     </ItemGroup>
 
     <!-- Add source files to "fable" folder in Nuget package -->
+<!--    <ItemGroup>-->
+<!--        <Content Include="*.fsproj; **/*.fs; **/*.fsi" PackagePath="fable/"/>-->
+<!--    </ItemGroup>-->
+
+    <!-- Add source files to "fable" folder in Nuget package -->
     <ItemGroup>
-        <Content Include="*.fsproj; **/*.fs; **/*.fsi" PackagePath="fable/"/>
+        <Content Include="*.fsproj; **\*.fs; **\*.fsi" PackagePath="fable\" />
     </ItemGroup>
 
 </Project>
