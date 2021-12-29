@@ -16,9 +16,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Domain.fs"/>
-        <Compile Include="Continuous.fs"/>
-        <Compile Include="Library.fs"/>
+        <Compile Include="Domain/Continuous.fs" />
+        <Compile Include="Domain/Discrete.fs" />
+        <Compile Include="Domain/Distributions.fs" />
+        <Compile Include="Library.fs" />
     </ItemGroup>
 
     <!-- Add source files to "fable" folder in Nuget package -->
@@ -29,6 +30,7 @@
     <!-- Add source files to "fable" folder in Nuget package -->
     <ItemGroup>
         <Content Include="*.fsproj; **\*.fs; **\*.fsi" PackagePath="fable\" />
+        <Content Include="secrets.txt" />
     </ItemGroup>
 
 </Project>

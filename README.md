@@ -25,7 +25,34 @@ The library is written in F# and compiles with fable to Javascript for use in JS
 ## License
 
 ## TODO
-- [ ] Publish package as a nuget package
+- [x] Publish package as a nuget package
+- [ ] Github action to publish to nuget
+- [ ] Github action to create npm branch and push to npm
+- [ ] Add support for fitting to data (future)
+
+
+### Distributions to support
+Arcsine, Bernoulli, Beta, BetaBinomial, BetaPrime, Binomial, Biweight,
+Categorical, Cauchy, Chi, Chisq, Cosine, DiagNormal, DiagNormalCanon,
+Dirichlet, DiscreteUniform, DoubleExponential, EdgeworthMean,
+EdgeworthSum, EdgeworthZ, Erlang,
+Epanechnikov, Exponential, FDist, FisherNoncentralHypergeometric,
+Frechet, FullNormal, FullNormalCanon, Gamma, GeneralizedPareto,
+GeneralizedExtremeValue, Geometric, Gumbel, Hypergeometric,
+InverseWishart, InverseGamma, InverseGaussian, IsoNormal,
+IsoNormalCanon, Kolmogorov, KSDist, KSOneSided, Laplace, Levy, LKJ, LKJCholesky,
+Logistic, LogNormal, MatrixBeta, MatrixFDist, MatrixNormal,
+MatrixTDist, MixtureModel, Multinomial,
+MultivariateNormal, MvLogNormal, MvNormal, MvNormalCanon,
+MvNormalKnownCov, MvTDist, NegativeBinomial, NoncentralBeta, NoncentralChisq,
+NoncentralF, NoncentralHypergeometric, NoncentralT, Normal, NormalCanon,
+NormalInverseGaussian, Pareto, PGeneralizedGaussian, Poisson, PoissonBinomial,
+QQPair, Rayleigh, Rician, Skellam, Soliton, StudentizedRange, SymTriangularDist, TDist, TriangularDist,
+Triweight, Truncated, TruncatedNormal, Uniform, UnivariateGMM,
+VonMises, VonMisesFisher, WalleniusNoncentralHypergeometric, Weibull,
+Wishart, ZeroMeanIsoNormal, ZeroMeanIsoNormalCanon,
+ZeroMeanDiagNormal, ZeroMeanDiagNormalCanon, ZeroMeanFullNormal,
+ZeroMeanFullNormalCanon
 
 [Apache 2.0](https://choosealicense.com/licenses/apache-2.0/)
 
