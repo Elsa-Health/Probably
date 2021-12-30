@@ -7,7 +7,7 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
         <PackageId>ElsaHealth.Probably</PackageId>
-        <Version>0.0.1</Version>
+        <Version>0.0.2</Version>
         <Authors>Elsa Health</Authors>
         <Company>Elsa Health Inc.</Company>
         <PackageLicenseUrl>Apache-2.0</PackageLicenseUrl>
