@@ -1,6 +1,7 @@
-module Probably.Domain.Discrete
-open System
+module Probably.Distributions.Discrete
 
+open System
+open Probably.Utils
 
 module Bernoulli =
     type Bernoulli = { p: float }
@@ -11,8 +12,14 @@ module Bernoulli =
         else
             { p = p }
 
-
-
+    let pmf (dist: Bernoulli) (x: float) =
+        if (x = 0.0) then
+            dist.p
+        else
+            1.0 - dist.p
+            
+    let mean (dist: Bernoulli) = dist.p
+    
 module Binomial =
     type Binomial = { p: float; n: int64 }
 
@@ -25,13 +32,31 @@ module Binomial =
             { p = p; n = n }
 
 module Poisson =
-    type Poisson = { lambda: int64 }
+    type Poisson = { lambda: float }
 
-    let create (lambda: int64) : Poisson =
+    let create (lambda: float) : Poisson =
         if (lambda < 0) then
             raise (ArgumentException("Lambda must be non negative"))
         else
             { lambda = lambda }
+            
+    let mean (dist: Poisson) = dist.lambda
+    
+    let pmf (dist: Poisson) (x: float) =
+        let numerator =
+            Math.Pow(dist.lambda, x)
+            * Math.Pow(Math.E, -dist.lambda)
+
+        let denominator = floatFactorial x
+        numerator / denominator
+        
+    let cdf (dist: Poisson) (x: float) =
+        let cumulative =
+            [ 0.0 .. floor x ]
+            |> List.map (fun i -> Math.Pow(dist.lambda, i) / (floatFactorial i))
+            |> List.sum
+
+        Math.Pow(Math.E, -dist.lambda) * cumulative
 
 module Categorical =
     type Categorical =
@@ -56,4 +81,3 @@ type Discrete =
     | Binomial of Binomial.Binomial
     | Poisson of Poisson.Poisson
     | Categorical of Categorical.Categorical
-
